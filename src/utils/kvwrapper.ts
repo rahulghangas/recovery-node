@@ -18,7 +18,7 @@ export async function getValueFromKey(key: string): Promise<string> {
     await db.get(key)
         .then(function () {return db.get(key)})
         .then(function (val: string) {value = val})
-        .catch(function (err) {
+        .catch(function (err: Error) {
             console.log(err)
         })
     if (value) {
@@ -33,7 +33,7 @@ export async function addOrUpdateKeyValue(key:string, val: string): Promise<stri
     await db.put(key, val)
         .then(function () {return db.get(key)})
         .then(function (data: string) {value = data})
-        .catch(function (err) {
+        .catch(function (err: Error) {
             console.log(err)
         })
     if (value) {
@@ -46,7 +46,7 @@ export async function addOrUpdateKeyValue(key:string, val: string): Promise<stri
 export async function deleteKey(key: string): Promise<boolean> {
     let deleted = true;
     await db.del(key)
-        .catch(function (err) {
+        .catch(function (err: Error) {
             console.log(err);
             deleted = false;
         })
