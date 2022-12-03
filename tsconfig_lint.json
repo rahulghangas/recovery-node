@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "checkJs": false,
+      "allowJs": true,
+      "target": "es2016",
+      "module": "commonjs",
+      "lib": ["es2015"],
+      "outDir": "./build/",
+  
+      "strict": true,
+  
+      "esModuleInterop": true,
+      "experimentalDecorators": true,
+      "downlevelIteration": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true
+    },
+    "exclude": ["node_modules"],
+    "include": ["./src/*.ts", "./src/sdkUtils/*.ts", "./__tests__/fixtures/*.ts", "./__tests__/units/*.ts", "./index.ts"]
+  }
