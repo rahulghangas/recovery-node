@@ -1,5 +1,5 @@
 export class CreateShare {
-    addres: string;
+    address: string;
     hash: string;
     share: string;
 }
@@ -15,5 +15,5 @@ export class GetShare {
         curve: any;
     }
 
-    public_signals: string[];
+    public_signals: any[];
 }
